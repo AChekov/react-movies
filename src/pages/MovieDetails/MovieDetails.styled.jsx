@@ -16,11 +16,10 @@ export const Button = styled.button`
   margin-bottom: 5px;
   padding: 7px 12px;
   border-radius: 5px;
-  color: red;
 `;
 
 export const Image = styled.img`
-  max-width: 300px;
+  max-width: 200px;
   display: block;
   border-radius: 5px;
 `;
@@ -45,7 +44,7 @@ margin-bottom: 20px;
 
 export const InfoContainer = styled.div`
   padding: 10px 20px 20px;
-  border-bottom: var(--border);
+  border-bottom: black;
 `;
 
 export const InfoLink = styled(NavLink)`
@@ -54,6 +53,6 @@ export const InfoLink = styled(NavLink)`
     margin-right: 15px;
   }
   &.active {
-    color: var(--hover-link-color);
+    color: orange;
   }
 `;

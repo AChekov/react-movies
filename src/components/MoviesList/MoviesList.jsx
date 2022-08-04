@@ -2,7 +2,8 @@ import { useLocation } from 'react-router-dom';
 import { List, Item } from './MoviesList.styled';
 
 const MoviesList = ({ movies }) => {
-  const location = useLocation;
+  const location = useLocation();
+
   return (
     <List>
       {movies &&

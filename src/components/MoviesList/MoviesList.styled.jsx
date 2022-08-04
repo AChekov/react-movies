@@ -7,7 +7,6 @@ export const List = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 15px 15px;
 `;
 
 export const Item = styled(Link)`

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Outlet, useParams } from 'react-router';
-import { fetchByMovieId } from '../../services/API';
+import { Outlet, useParams, useLocation, useNavigate } from 'react-router';
+import { fetchMoviesById } from '../../services/API';
 import {
   CardContainer,
   ImageContainer,
@@ -16,11 +16,13 @@ import {
 const MovieDetails = () => {
   const { movieId } = useParams();
   const [details, setDetails] = useState(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getMovie = async () => {
       try {
-        const res = await fetchByMovieId(Number(movieId));
+        const res = await fetchMoviesById(Number(movieId));
         setDetails(res);
       } catch (error) {
         console.log(error.message);
@@ -34,7 +36,12 @@ const MovieDetails = () => {
       {details && (
         <CardContainer>
           <ImageContainer>
-            <Button type="button">Back</Button>
+            <Button
+              type="button"
+              onClick={() => navigate(location?.state?.from ?? '/')}
+            >
+              Go Back
+            </Button>
             <Image src={details.img} alt={details.title} />
           </ImageContainer>
           <DataContainer>

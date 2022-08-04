@@ -1,12 +1,20 @@
 import { Outlet } from 'react-router-dom';
-import { AppContainer, NavContainer, NavLinkStyled } from './Layout.styled';
+import { AppContainer, NavContainer, NavLinkItem } from './Layout.styled';
+
+const navLinkItem = [
+  { href: '/', text: 'HOME' },
+  { href: 'movies', text: 'MOVIES' },
+];
 
 const Layout = () => {
   return (
     <AppContainer>
       <NavContainer>
-        <NavLinkStyled to="/">Home</NavLinkStyled>
-        <NavLinkStyled to="/movies">Movies</NavLinkStyled>
+        {navLinkItem.map(({ href, text }) => (
+          <NavLinkItem to={href} key={href}>
+            {text}
+          </NavLinkItem>
+        ))}
       </NavContainer>
       <Outlet />
     </AppContainer>
