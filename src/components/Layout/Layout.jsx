@@ -6,6 +6,7 @@ const Layout = () => {
     <AppContainer>
       <NavContainer>
         <NavLinkStyled to="/">Home</NavLinkStyled>
+        <NavLinkStyled to="/movies">Movies</NavLinkStyled>
       </NavContainer>
       <Outlet />
     </AppContainer>

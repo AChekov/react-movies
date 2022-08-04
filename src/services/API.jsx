@@ -11,7 +11,7 @@ export const fetchPopularMovies = async () => {
     const { data } = await axios.get(`${POPULAR_URL}?api_key=${API_KEY}`);
     return data;
   } catch (error) {
-    console.log('PopError :', error);
+    console.log(error);
   }
 };
 
@@ -22,7 +22,7 @@ export const fetchByMovieName = async query => {
     );
     return data;
   } catch (error) {
-    console.log('queryError :', error);
+    console.log(error);
   }
 };
 
@@ -31,6 +31,6 @@ export const fetchByMovieId = async movie_id => {
     const { data } = await axios.get(`${ID_URL}&{movie_id}?api_key=${API_KEY}`);
     return data;
   } catch (error) {
-    console.log('IdError :', error);
+    console.log(error);
   }
 };
