@@ -4,7 +4,7 @@ import {
   normalizeMoviesDetails,
 } from '../helpers/normalization';
 
-const API_KEY = '7cb8097836a7a1f4e5c19953961668c8';
+const API_KEY = '32e5de1f8d1f8b349737f2ff256fe882';
 axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 axios.defaults.params = {
   api_key: API_KEY,

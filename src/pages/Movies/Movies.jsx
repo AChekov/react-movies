@@ -3,26 +3,47 @@ import MoviesList from 'components/MoviesList';
 import { useState } from 'react';
 import { FcSearch } from 'react-icons/fc';
 import noImg from '../../img/noFound.png';
+import { toast } from 'react-toastify';
+import { useSearchMovies } from 'hooks/hooks';
 
 const initialState = [
   {
-    id: 789,
-    img: noImg,
-    title: 'movie_title',
-  },
-  {
-    id: 789,
+    id: 987,
     img: noImg,
     title: 'movie_title',
   },
 ];
 
-const MoviesSearch = () => {
+const MoviesSearch = ({ onSubmit }) => {
+  const [query, setQuery] = useState('');
   const [movies] = useState(initialState);
-  // onSubmit = { handleSubmit };
+
+  const searchedMovies = useSearchMovies(query);
+  console.log(searchedMovies);
+
+  const handleValueChange = evt => {
+    setQuery(evt.currentTarget.value.toLowerCase());
+  };
+
+  const handleSubmit = evt => {
+    evt.preventDefault();
+    // const newQuery = evt.target.elements[0].value.trim();
+    // if (query === newQuery || newQuery === '') {
+    //   return;
+    // }
+
+    if (query.trim() === '') {
+      toast.error('Enter a search term');
+      return;
+    }
+    // console.log(query);
+    // onSubmit(query);
+    setQuery('');
+  };
+
   return (
     <>
-      <SearchForm>
+      <SearchForm onSubmit={handleSubmit}>
         <SearchBtn type="submit">
           <FcSearch size="30" />
         </SearchBtn>
@@ -31,11 +52,15 @@ const MoviesSearch = () => {
           name="searchQuery"
           type="text"
           placeholder="Search movies..."
-          // value={searchQuery}
-          // onChange={handleValueChange}
+          value={query}
+          onChange={handleValueChange}
         />
       </SearchForm>
-      {movies.length !== 0 && <MoviesList movies={movies} />}
+      {searchedMovies.length !== 0 ? (
+        <MoviesList movies={searchedMovies} />
+      ) : (
+        <MoviesList movies={movies} />
+      )}
     </>
   );
 };

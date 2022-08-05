@@ -2,13 +2,13 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const AppContainer = styled.div`
-  border-bottom: 1px solid black;
+  min-height: 100vh;
   padding: 30px;
 `;
 
 export const NavContainer = styled.div`
-  display: flex;
-  padding: 20px;
+  padding: 10px;
+  border-bottom: 1px solid black;
 `;
 
 export const NavLinkItem = styled(NavLink)`
