@@ -5,6 +5,7 @@ import Home from 'pages/Home';
 import Movies from 'pages/Movies';
 import MovieDetails from 'pages/MovieDetails';
 import Cast from 'components/Cast';
+import Reviews from 'components/Reviews';
 import { fetchPopularMovies } from '../../services/API';
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
           element={<MovieDetails movies={movies} />}
         >
           <Route path="cast" element={<Cast />} />
+          <Route path="reviews" element={<Reviews />} />
         </Route>
       </Route>
     </Routes>

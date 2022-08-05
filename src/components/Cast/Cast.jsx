@@ -11,9 +11,9 @@ const Cast = () => {
   useEffect(() => {
     const getCast = async () => {
       try {
-        const response = await fetchMoviesCast(Number(movieId));
-        console.log(response);
-        setCast(response);
+        const res = await fetchMoviesCast(Number(movieId));
+        // console.log(res);
+        setCast(res);
       } catch (error) {
         console.log(error.message);
       }
@@ -38,7 +38,7 @@ const Cast = () => {
             })}
         </List>
       ) : (
-        <Data>we have no information about the actors in that movie</Data>
+        <Data>We have no information about the actors in that movie</Data>
       )}
     </Container>
   );
