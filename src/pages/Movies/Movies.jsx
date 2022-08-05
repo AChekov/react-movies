@@ -1,4 +1,4 @@
-import { SearchContainer, Input, Button } from './Movies.styled';
+import { SearchForm, SearchInput, SearchBtn } from './Movies.styled';
 import MoviesList from 'components/MoviesList';
 import { useState } from 'react';
 import { FcSearch } from 'react-icons/fc';
@@ -19,15 +19,22 @@ const initialState = [
 
 const MoviesSearch = () => {
   const [movies] = useState(initialState);
-
+  // onSubmit = { handleSubmit };
   return (
     <>
-      <SearchContainer>
-        <Input type="text" placeholder="Search movies..." />
-        <Button type="submit">
+      <SearchForm>
+        <SearchBtn type="submit">
           <FcSearch size="30" />
-        </Button>
-      </SearchContainer>
+        </SearchBtn>
+
+        <SearchInput
+          name="searchQuery"
+          type="text"
+          placeholder="Search movies..."
+          // value={searchQuery}
+          // onChange={handleValueChange}
+        />
+      </SearchForm>
       {movies.length !== 0 && <MoviesList movies={movies} />}
     </>
   );

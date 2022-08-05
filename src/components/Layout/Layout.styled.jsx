@@ -19,5 +19,7 @@ export const NavLinkItem = styled(NavLink)`
   }
   &.active {
     color: orange;
+    border-bottom: 2px solid blue;
+    border-radius: 5px;
   }
 `;

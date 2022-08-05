@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const CardContainer = styled.div`
   display: flex;
   padding: 10px 20px 20px;
-  border-bottom: var(--border);
+  border-bottom: 1px solid;
 `;
 export const ImageContainer = styled.div`
   margin-right: 35px;
@@ -12,10 +12,16 @@ export const ImageContainer = styled.div`
 `;
 
 export const Button = styled.button`
-  background: #fbf9fa3f;
+  font-weight: bold;
+  background: inherit;
   margin-bottom: 5px;
   padding: 7px 12px;
   border-radius: 5px;
+  transition: all 0.5s ease 0s;
+  :hover {
+    transition: all 0.5s ease 0s;
+    background: orange;
+  }
 `;
 
 export const Image = styled.img`

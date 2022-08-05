@@ -16,7 +16,6 @@ export const Item = styled.li`
 
 export const Data = styled.p`
   font-size: 16px;
-
   &:not(:last-of-type) {
     margin-bottom: 10px;
   }
