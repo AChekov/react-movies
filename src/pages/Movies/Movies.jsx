@@ -14,25 +14,21 @@ const initialState = [
   },
 ];
 
-const MoviesSearch = ({ onSubmit }) => {
+const MoviesSearch = () => {
   const [query, setQuery] = useState('');
   const [movies] = useState(initialState);
 
   const searchedMovies = useSearchMovies(query);
-  console.log(searchedMovies);
-
-  const handleValueChange = evt => {
-    setQuery(evt.currentTarget.value.toLowerCase());
-  };
+  // console.log(searchedMovies);
 
   const handleSubmit = evt => {
     evt.preventDefault();
-    // const newQuery = evt.target.elements[0].value.trim();
-    // if (query === newQuery || newQuery === '') {
-    //   return;
-    // }
+
+    setQuery(evt.currentTarget.elements.searchQuery.value.toLowerCase().trim());
+    console.log(setQuery);
 
     if (query.trim() === '') {
+      console.log('Enter a search term');
       toast.error('Enter a search term');
       return;
     }
@@ -52,8 +48,6 @@ const MoviesSearch = ({ onSubmit }) => {
           name="searchQuery"
           type="text"
           placeholder="Search movies..."
-          value={query}
-          onChange={handleValueChange}
         />
       </SearchForm>
       {searchedMovies.length !== 0 ? (
