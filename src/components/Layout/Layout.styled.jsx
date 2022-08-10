@@ -6,7 +6,7 @@ export const AppContainer = styled.div`
   padding: 30px;
 `;
 
-export const NavContainer = styled.div`
+export const NavContainer = styled.header`
   padding: 10px;
   border-bottom: 1px solid black;
 `;

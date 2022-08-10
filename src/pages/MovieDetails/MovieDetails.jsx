@@ -37,7 +37,7 @@ const MovieDetails = () => {
         <CardContainer>
           <ImageContainer>
             <Button
-              type="button"
+              // type="button"
               onClick={() => navigate(location?.state?.from ?? '/')}
             >
               Go Back

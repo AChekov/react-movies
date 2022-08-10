@@ -8,7 +8,7 @@ const MoviesList = ({ movies }) => {
     <List>
       {movies &&
         movies.map(({ id, title, img }) => (
-          <Item key={id} to={`movies/${id}`} state={{ from: location }}>
+          <Item key={id} to={`/movies/${id}`} state={{ from: location }}>
             <img src={img} alt={title} />
             <h3>{title}</h3>
           </Item>
