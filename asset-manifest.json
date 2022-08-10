@@ -1,19 +1,27 @@
 {
   "files": {
     "main.css": "/react-movies/static/css/main.8f09920f.css",
-    "main.js": "/react-movies/static/js/main.57d0e21e.js",
-    "static/js/485.7023ee66.chunk.js": "/react-movies/static/js/485.7023ee66.chunk.js",
-    "static/js/407.bf27ac3f.chunk.js": "/react-movies/static/js/407.bf27ac3f.chunk.js",
-    "static/js/733.4d0b1a62.chunk.js": "/react-movies/static/js/733.4d0b1a62.chunk.js",
+    "main.js": "/react-movies/static/js/main.c8aadc5f.js",
+    "static/js/643.f253a8f1.chunk.js": "/react-movies/static/js/643.f253a8f1.chunk.js",
+    "static/js/407.46a3fc83.chunk.js": "/react-movies/static/js/407.46a3fc83.chunk.js",
+    "static/js/815.58fe2fce.chunk.js": "/react-movies/static/js/815.58fe2fce.chunk.js",
+    "static/js/104.1d5d018b.chunk.js": "/react-movies/static/js/104.1d5d018b.chunk.js",
+    "static/js/187.4fe31ed1.chunk.js": "/react-movies/static/js/187.4fe31ed1.chunk.js",
+    "static/js/774.d3d9752a.chunk.js": "/react-movies/static/js/774.d3d9752a.chunk.js",
+    "static/js/733.7d6ec572.chunk.js": "/react-movies/static/js/733.7d6ec572.chunk.js",
     "index.html": "/react-movies/index.html",
     "main.8f09920f.css.map": "/react-movies/static/css/main.8f09920f.css.map",
-    "main.57d0e21e.js.map": "/react-movies/static/js/main.57d0e21e.js.map",
-    "485.7023ee66.chunk.js.map": "/react-movies/static/js/485.7023ee66.chunk.js.map",
-    "407.bf27ac3f.chunk.js.map": "/react-movies/static/js/407.bf27ac3f.chunk.js.map",
-    "733.4d0b1a62.chunk.js.map": "/react-movies/static/js/733.4d0b1a62.chunk.js.map"
+    "main.c8aadc5f.js.map": "/react-movies/static/js/main.c8aadc5f.js.map",
+    "643.f253a8f1.chunk.js.map": "/react-movies/static/js/643.f253a8f1.chunk.js.map",
+    "407.46a3fc83.chunk.js.map": "/react-movies/static/js/407.46a3fc83.chunk.js.map",
+    "815.58fe2fce.chunk.js.map": "/react-movies/static/js/815.58fe2fce.chunk.js.map",
+    "104.1d5d018b.chunk.js.map": "/react-movies/static/js/104.1d5d018b.chunk.js.map",
+    "187.4fe31ed1.chunk.js.map": "/react-movies/static/js/187.4fe31ed1.chunk.js.map",
+    "774.d3d9752a.chunk.js.map": "/react-movies/static/js/774.d3d9752a.chunk.js.map",
+    "733.7d6ec572.chunk.js.map": "/react-movies/static/js/733.7d6ec572.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8f09920f.css",
-    "static/js/main.57d0e21e.js"
+    "static/js/main.c8aadc5f.js"
   ]
 }
