@@ -33,14 +33,13 @@ const MoviesSearch = () => {
       return;
     }
     // console.log(query);
-    // onSubmit(query);
     setQuery('');
   };
 
   return (
     <main>
-      <ToastContainer theme="colored" position="top-right" autoClose={2000} />
       <SearchForm onSubmit={handleSubmit}>
+        <ToastContainer theme="colored" position="top-right" autoClose={2000} />
         <SearchBtn type="submit">
           <FcSearch size="30" />
         </SearchBtn>
