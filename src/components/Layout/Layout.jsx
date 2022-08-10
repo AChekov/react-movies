@@ -1,5 +1,7 @@
+import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { AppContainer, NavContainer, NavLinkItem } from './Layout.styled';
+import Loader from 'components/Loader';
 
 const navLinkItem = [
   { href: '/', text: 'HOME' },
@@ -16,7 +18,9 @@ const Layout = () => {
           </NavLinkItem>
         ))}
       </NavContainer>
-      <Outlet />
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </AppContainer>
   );
 };

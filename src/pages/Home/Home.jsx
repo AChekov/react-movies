@@ -19,10 +19,10 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <main>
       <Title>Trending Today</Title>
       <MoviesList movies={movies} />
-    </>
+    </main>
   );
 };
 

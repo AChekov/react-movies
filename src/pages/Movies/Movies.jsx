@@ -3,7 +3,7 @@ import MoviesList from 'components/MoviesList';
 import { useState } from 'react';
 import { FcSearch } from 'react-icons/fc';
 import noImg from '../../img/noFound.png';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import { useSearchMovies } from 'hooks/hooks';
 
 const initialState = [
@@ -38,7 +38,8 @@ const MoviesSearch = () => {
   };
 
   return (
-    <>
+    <main>
+      <ToastContainer theme="colored" position="top-right" autoClose={2000} />
       <SearchForm onSubmit={handleSubmit}>
         <SearchBtn type="submit">
           <FcSearch size="30" />
@@ -55,7 +56,7 @@ const MoviesSearch = () => {
       ) : (
         <MoviesList movies={movies} />
       )}
-    </>
+    </main>
   );
 };
 
